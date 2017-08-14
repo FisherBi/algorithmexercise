@@ -1,4 +1,4 @@
-package algorithms.stackandqueue.设计一个有getMin功能的栈;
+package algorithms.stackandqueue.getminstack;
 
 /**
  * Created by FisherBi on 2017/8/13.
