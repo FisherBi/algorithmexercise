@@ -32,7 +32,7 @@ public class Matrix {
                 curC++;
             }
             while (curR != dR){
-                System.out.println(m[curR][tR] + " ");
+                System.out.println(m[curR][dC] + " ");
                 curR++;
             }
             while (curC != tC){
