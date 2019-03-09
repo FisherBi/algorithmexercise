@@ -13,12 +13,13 @@ public class Code_04_UnionFind {
 		public HashMap<Node, Node> fatherMap;
 		public HashMap<Node, Integer> sizeMap;
 
-		public UnionFindSet() {
-			fatherMap = new HashMap<Node, Node>();
-			sizeMap = new HashMap<Node, Integer>();
+		public UnionFindSet(List<Node> nodes) {
+			makeSets(nodes);
 		}
 
 		public void makeSets(List<Node> nodes) {
+			fatherMap = new HashMap<Node, Node>();
+			sizeMap = new HashMap<Node, Integer>();
 			fatherMap.clear();
 			sizeMap.clear();
 			for (Node node : nodes) {
