@@ -93,4 +93,27 @@ public class AllLessNumSubArray {
         System.out.println(getNum(arr, num));
 
     }
+
+    // basic code
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        if(nums==null||k<1||nums.length<k)
+            return new int[0];
+        int len=nums.length;
+        int[] res=new int[len-k+1];
+        LinkedList<Integer> queue=new LinkedList<Integer>();
+        int index=0;
+        for(int i=0;i<len;i++){
+            int cur=nums[i];
+            while(!queue.isEmpty()&&nums[queue.peekLast()]<=cur){
+                queue.pollLast();
+            }
+            queue.addLast(i);
+            if(i-k==queue.peekFirst())
+                queue.pollFirst();
+            if(i>=k-1){
+                res[index++]=nums[queue.peekFirst()];
+            }
+        }
+        return res;
+    }
 }
