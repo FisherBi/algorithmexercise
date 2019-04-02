@@ -1,7 +1,7 @@
 import java.io.*;
 import java.text.ParseException;
 
-public class Main {
+public class CSVConversion {
 
     private static void formatFile() {
         File csvFile = new File("csv.txt");
