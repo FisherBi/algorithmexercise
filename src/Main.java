@@ -15,10 +15,8 @@ public class Main {
                 bufferedWriter.write(formatStr);
                 bufferedWriter.newLine();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
+        } catch (IOException | ParseException e) {
+            System.out.println("文件格式错误");
         }
     }
 
